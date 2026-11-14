@@ -1,0 +1,13 @@
+{
+  "name": "terrablock-host",
+  "version": "0.2.0",
+  "private": true,
+  "description": "Provider-independent launcher and TCP gateway for the TerraBlock LÖVE server",
+  "type": "module",
+  "engines": { "node": ">=20.6" },
+  "scripts": {
+    "setup": "bash scripts/setup-love.sh",
+    "start": "node --env-file=.env bridge/src/index.js",
+    "check": "node --check bridge/src/index.js && node --check bridge/src/config.js && node --check bridge/src/supervisor.js && node --check bridge/src/gateway.js"
+  }
+}
