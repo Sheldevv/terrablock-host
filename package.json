@@ -7,7 +7,8 @@
   "engines": { "node": ">=20.6" },
   "scripts": {
     "setup": "bash scripts/setup-love.sh",
-    "start": "node --env-file=.env bridge/src/index.js",
+    "start": "node bridge/src/index.js",
+    "dev": "node --env-file=.env bridge/src/index.js",
     "check": "node --check bridge/src/index.js && node --check bridge/src/config.js && node --check bridge/src/supervisor.js && node --check bridge/src/gateway.js"
   }
 }
